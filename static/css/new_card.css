@@ -1,0 +1,85 @@
+body{
+    background-color: #fef6ed;
+}
+.details{
+    display: none;
+}
+
+.show{
+    display: flex;
+} 
+
+.myf{
+    display:inline-flex;
+    /* margin-left: 100px; */
+    /* border-radius: 150px; */
+
+    
+
+}
+
+/* .fg{
+    margin-right: 100px;
+} */
+
+.spa{
+    background-color: #fd8550;
+    border-radius: 15px;
+    color: #fff;
+    display: block;
+    height: 30px;
+    left: 242px;
+    padding: 4px 11px 5px;
+    position: absolute;
+    text-align: center;
+    top:12px;
+    width: 32px;
+    font-size: 15px;
+    /* text-shadow: 2px 4px 6px rgb(243, 66, 66); */
+}
+
+
+.form-control{
+    border-radius: 10px;
+    border-color: #fd8550;
+    width: 220px!important;
+    margin-left: 50px;
+   
+}
+
+
+.bg-primary{
+    background-color: #494748!important;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+}
+
+.bg-success {
+        background-color: #c59a2a !important;
+        border: 1px solid transparent !important;
+        border-radius: 15px !important;;
+}
+
+.bg-secondary {
+    background-color: #9d9da0 !important;
+    border: 1px solid transparent !important;;
+    border-radius: 15px !important;;
+}
+
+
+
+ .package-btn{
+    align-items: center;
+    text-decoration: none;
+    background-color: #fd8550;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    /* margin-left: 120px; */
+    margin-left: 65px;
+    font-family: IncfileBold;
+    font-size: 15px;
+    transition: background-color .3s ease,color .3s ease,.3s ease;
+} 

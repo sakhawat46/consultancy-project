@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'css/business_guide.css' %}">
+
+<div class="container" style="margin-left: 10%; margin-right: 10%; margin-top: 150px; margin-bottom: 5%;">
+
+
+
+    <!--------- First Section start ------------>
+    <section class="banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 text-div">
+                    <div class="banner-content">
+                        <h1 class="content-h1 px-4">
+                            Business Startup<br>Guides
+                        </h1>
+
+                        <h2>
+                            Start a new business today! Incfile has you covered with lots of
+                            business ideas and in-depth guides for success in different
+                            industries. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book.
+                        </h2>
+
+                        {% comment %} <div class="btn-container mb-4">
+                            <div class="button-item th-or">
+                                <a href="#">Check your business types &#8594;</a>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+                <!-- image div start -->
+                <div class="col-lg-6 col-md-6 col-sm-12 img-div">
+                    <!-- <h1>Right div here</h1> -->
+                    <img src="{% static 'images/start.webp' %}" class="img-fluid" style="
+                height: 80%;
+                width: 100%;
+                margin-bottom: 8rem;
+                padding: 10px;
+              " />
+                </div>
+                <!-- image div end -->
+            </div>
+        </div>
+    </section>
+
+    <!------- First Section End------->
+
+
+
+
+
+
+    <!-- 2nd section start -->
+
+    <main>
+        <section class="container mt-4">
+            <!-- Father Div Start -->
+            <div class="second-section  d-flex">
+                <!-- right div start -->
+                <div class="right-div mx-4 d-flex carousal-st">
+                    <!-- image div start -->
+                    <div class="img-div2">
+                        <img src="{% static 'images/book.webp' %}" class="img-fluid" alt="Responsive image" />
+                    </div>
+                    <!-- image div end -->
+
+                    <!-- carousal start -->
+                    {% comment %} <div id="carouselExampleSlidesOnly" class="carousel slide carousal-style" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1
+                                    style="text-align:center;margin-top:55px;color:#54A2D2;font-size: 25px; margin-right:5px;">
+                                    Welcome
+                                    To BGD</h1>
+                            </div>
+                            <div class="carousel-item">
+                                <h3 class="text-center">
+                                    Ideas are easy.Implementation is hard.<br />-Guy Kawasaki,AllTop Co-founder.
+                                </h3>
+                            </div>
+                            <div class="carousel-item">
+                                <h3 class="text-center">
+                                    Your most unhappy customers are your greatest source of learning.<br />-Bill Gates
+                                </h3>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h3 class="text-center">
+                                    Make mistakes faster.<br />-Andrew Grove, Intel Co-founder.
+                                </h3>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h3 class="text-center">
+                                    Data beats emotions.<br />–Sean Rad,Adly and Tinder founder.
+                                </h3>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <h3 class="text-center">
+                                    We are our choices.Build yourself a great story.<br />-Jeff
+                                    Bezos,Amazon Founder
+                                </h3>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h3 class="text-center">
+                                    “Don’t worry about failure; you only have to be right once.<br />–Drew Houston,
+                                    Dropbox Co-founder.
+                                </h3>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                    <!-- carousal end -->
+                </div>
+                <!-- right div end -->
+
+                <!-- left div start -->
+                <div class="left-div mx-4">
+                    <div class="left-div-f">
+                        <div class="div-h4 mt-4 mx-4">
+                            <span>
+                                <h3>Before you start a business...</h3>
+
+                                <p class="div-6 mt-4 mx-2" style="color:#B2BEB5">
+                                    Before you start a new business, you want to make sure this new endeavor is going to
+                                    be a right fit
+                                    for you and for the market.
+                                </p>
+                            </span>
+                        </div>
+
+                        <div class="left-div-f2">
+                            <div class="left-fiv-f3">
+                                <div class="left-div-f4">
+                                    <h4 class="mt-4 mx-4" style="">Don't blindly dive headfirst into launching a new
+                                        business</h4>
+
+                                    <p class="mt-4 mx-4">Use our in-depth "Start a Business" guides to research
+                                        everything you need to do
+                                        before your doors open.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="left-div-f2">
+                            <div class="left-fiv-f3">
+                                <div class="left-div-f4">
+                                    <p class="mt-4 mx-4" style="color:rgb(155, 143, 143); ">We've researched key areas
+                                        for your industry,
+                                        from market data; customer needs; and business taxes to setting up your
+                                        business; understanding
+                                        rules, regulations and laws; and choosing the correct business entity. Select
+                                        your new business type
+                                        below to get started on the right path.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- left div end -->
+            </div>
+            <!-- Father Div end -->
+        </section>
+    </main>
+    <!-- 2nd section end -->
+
+
+
+    <!-- Youtube  -->
+
+
+    <div class="embed-responsive embed-responsive-16by9 Res-frame">
+        <iframe class="Res-frame-2 embed-responsive-item Res-frame mt-5 mb-5 py-4  mx-5" width="560" height="315"
+            style="background-color: #EDF2F3;" src="https://www.youtube.com/embed/dJQn4DqzMVQ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+
+
+    <!-- Youtube  -->
+
+
+
+    <!--Business Type Section Start -->
+    <section class="container-fluid mt-5  business-section" style="background-color: #F2F6FF">
+
+        <div>
+            <h1 class="mt-4 mb-4 px-4 py-4" style="text-align: center; font-family:sans-serif;">Check out these types
+                of<br>Businesses you could start</h1>
+
+            {% comment %} <h4 class="business-types" style="color: white;">Businesses Types</h4> {% endcomment %}
+        </div>
+
+        <div class="container">
+
+            <!-- 1st row start -->
+            <div class="row mt-4 mb-4  business-section ">
+                <div class="col card d-flex"
+                    style="width:18rem; height:6rem; border-radius: 20px; margin-right:20px; margin-bottom: 15px;">
+
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: antiquewhite; border-radius:35px">
+                            <img class="img-fluid" style="height: 50px; width: 50px; padding:8px; margin-bottom:3px ; "
+                                src="{% static 'images/amazon88.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:25px; margin-top:1rem;">
+
+                            <h5>Amazon Saller</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col card"
+                    style="width:18rem; height: 6rem; border-radius: 20px; margin-right:20px;  margin-bottom: 15px;">
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: #F1F5FE; border-radius:30px">
+                            <img class="img-fluid" style="height: 60px; width: 60px; padding:8px; "
+                                src="{% static 'images/computer-2346.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:25px; margin-top:1rem;">
+
+                            <h5>Digital Nomad</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col card"
+                    style="width:18rem; height: 6rem; border-radius: 20px; margin-right:20px;  margin-bottom: 15px;">
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: #F1F5FE; border-radius:30px">
+                            <img class="img-fluid" style="height: 60px; width: 60px; padding:8px; "
+                                src="{% static 'images/buy597.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:25px; margin-top:1rem;">
+
+                            <h5>Online</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 1st row end -->
+
+            <!-- 2nd row start -->
+
+            <div class="row mt-4 mb-4 business-section">
+                <div class="col card d-flex"
+                    style="width:18rem; height:6rem; border-radius: 20px; margin-right:20px; margin-bottom: 15px; margin-bottom:15px">
+
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: #f7f1b3; border-radius:35px">
+                            <img class="img-fluid" style="height: 50px; width: 50px; padding:8px; margin-bottom:3px ; "
+                                src="{% static 'images/block.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:25px; margin-top:1rem;">
+
+                            <h5>BlockChain</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col card"
+                    style="width:18rem; height: 6rem; border-radius: 20px; margin-right:20px;  margin-bottom: 15px;">
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: #f0dfd7; border-radius:30px">
+                            <img class="img-fluid" style="height: 60px; width: 60px; padding:8px; "
+                                src="{% static 'images/ok235.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:35px; margin-top:1rem;">
+
+                            <h5>Soial Media</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col card"
+                    style="width:18rem; height: 6rem; border-radius: 20px; margin-right:20px;  margin-bottom: 15px;">
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: rgb(241, 208, 214); border-radius:30px">
+                            <img class="img-fluid" style="height: 60px; width: 60px; padding:8px; "
+                                src="{% static 'images/micro.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:25px; margin-top:1rem;">
+
+                            <h5>Micro Business</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 2nd row end -->
+
+
+
+            <!-- 3rd row start -->
+
+            <div class="row mt-4 mb-4 business-section">
+                <div class="col card d-flex"
+                    style="width:18rem; height:6rem; border-radius: 20px; margin-right:20px; margin-bottom: 15px; margin-bottom:15px">
+
+                    <div class="d-flex flex-sm-column flex-md-row" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: #f7f1b3; border-radius:35px">
+                            <img class="img-fluid" style="height: 50px; width: 50px; padding:8px; margin-bottom:3px ; "
+                                src="{% static 'images/bulb385.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:25px; margin-top:1rem;">
+
+                            <h5>No Money</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col card"
+                    style="width:18rem; height: 6rem; border-radius: 20px; margin-right:20px;  margin-bottom: 15px;">
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: #f0dfd7; border-radius:30px">
+                            <img class="img-fluid" style="height: 60px; width: 60px; padding:8px; "
+                                src="{% static 'images/home-0092.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:35px; margin-top:1rem;">
+
+                            <h5>Home</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col card"
+                    style="width:18rem; height: 6rem; border-radius: 20px; margin-right:20px;  margin-bottom: 15px;">
+                    <div class="d-flex" style="margin-left:15px; margin-top:1rem">
+                        <div class="img-card" style="background-color: rgb(221, 245, 243); border-radius:30px">
+                            <img class="img-fluid" style="height: 60px; width: 60px; padding:8px; "
+                                src="{% static 'images/bag5.webp' %}" alt="Responsive-Image">
+                        </div>
+
+                        <div style="margin-left:25px; margin-top:1rem;">
+
+                            <h5>Woman</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 3rd row end -->
+
+        </div>
+
+    </section>
+
+    <!--Business Type Section Start -->
+
+
+
+
+</div>
+
+{% endblock %}

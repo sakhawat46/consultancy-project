@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+
+
+<div class="container" style="margin-bottom: 100px; margin-top: 150px;">
+
+    <section>
+        <div class="card-service">
+
+            <!-- card heading start here -->
+            <div class="title text-center mb-3">
+                <h1 class="font-weight-bolder" style="margin-top:50px">START YOUR BUSINESS TODAY</h1>
+            </div>
+            <!-- card heading end here -->
+
+            <div class="container">
+                <div class="row mb-4">
+
+                    <!----- Platinum card start here ------- -->
+
+                    {% comment %} {% for package in packages %} {% endcomment %}
+
+                    <div class="col-12 col-lg-4 mt-4">
+                        <div class="card" style="background-color: #fcfcfc">
+                            <div class="card-header">
+                                {% comment %} <h4 class="card-title">{{ package.name }} </h4> {% endcomment %}
+                                <h4 class="card-title">Platinum </h4>
+                                <p class="card-text">Comprehensive features
+                                    to get your business started</p>
+                            </div>
+
+
+                            <div class="card-body">
+                                <img class="card-img-top mx-auto d-block" style="width:80px;"
+                                    src="{% static 'images/rocket.png' %}">
+                                <p class="price" style="margin-bottom:0;">
+
+                                    {% comment %} ৳ <span>{{ package.price }}</span> {% endcomment %}
+
+                                </p>
+                                <p class="price-desc" style="margin-bottom: 24px;">
+                                    Full service features at the best value
+                                </p>
+
+
+                                {% comment %} <a href="{% url 'bgd_consultancy_app:booking' %}"
+                                    style="text-decoration: none;">
+
+                                    <button class="btn1 " data-package="Gold">
+                                        Purchase <i class="fa-solid fa-arrow-right" style="margin-left: 5px;">
+                                        </i></button>
+                                </a> {% endcomment %}
+
+
+                                <ul class="fees"></ul>
+                            </div>
+
+
+                            <div class="card-footer">
+                                <p style="text-align:center" ;><strong>INCLUDES:</strong></p>
+
+                                <!--Special offer start-->
+
+                                <ul class="benifits-ulta">
+                                    <li style="list-style:none;">
+                                        <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9579 6.12335C15.8525 5.79938 15.5652 5.57001 15.2266 5.53937L10.6079 5.12006L8.7826 0.846619C8.64784 0.532654 8.3412 0.330017 7.99989 0.330017C7.65858 0.330017 7.35182 0.532654 7.21791 0.846619L5.39259 5.12006L0.773203 5.53937C0.43458 5.57062 0.147837 5.79999 0.0418798 6.12335C-0.0634669 6.44733 0.0338231 6.80267 0.289927 7.02728L3.78126 10.0887L2.75184 14.6226C2.67652 14.956 2.80592 15.3007 3.08253 15.5007C3.23121 15.6087 3.40589 15.6627 3.58119 15.6627C3.73182 15.6627 3.88258 15.6226 4.01722 15.5421L7.99989 13.1607L11.9818 15.5421C12.2739 15.7166 12.6412 15.7006 12.9172 15.5007C13.1939 15.3007 13.3233 14.956 13.2479 14.6226L12.2185 10.0887L15.7098 7.02728C15.9658 6.80267 16.0632 6.44806 15.9579 6.12335Z"
+                                                    fill="#97E0C7"></path>
+                                            </svg></span>
+                                        <span>Business Contract Templates</span>
+                                    </li>
+                                    <li style="list-style:none;">
+                                        <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9579 6.12335C15.8525 5.79938 15.5652 5.57001 15.2266 5.53937L10.6079 5.12006L8.7826 0.846619C8.64784 0.532654 8.3412 0.330017 7.99989 0.330017C7.65858 0.330017 7.35182 0.532654 7.21791 0.846619L5.39259 5.12006L0.773203 5.53937C0.43458 5.57062 0.147837 5.79999 0.0418798 6.12335C-0.0634669 6.44733 0.0338231 6.80267 0.289927 7.02728L3.78126 10.0887L2.75184 14.6226C2.67652 14.956 2.80592 15.3007 3.08253 15.5007C3.23121 15.6087 3.40589 15.6627 3.58119 15.6627C3.73182 15.6627 3.88258 15.6226 4.01722 15.5421L7.99989 13.1607L11.9818 15.5421C12.2739 15.7166 12.6412 15.7006 12.9172 15.5007C13.1939 15.3007 13.3233 14.956 13.2479 14.6226L12.2185 10.0887L15.7098 7.02728C15.9658 6.80267 16.0632 6.44806 15.9579 6.12335Z"
+                                                    fill="#97E0C7"></path>
+                                            </svg></span>
+                                        <span>Free Next Day Filing</span>
+                                    </li>
+                                    <li style="list-style:none;">
+                                        <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9579 6.12335C15.8525 5.79938 15.5652 5.57001 15.2266 5.53937L10.6079 5.12006L8.7826 0.846619C8.64784 0.532654 8.3412 0.330017 7.99989 0.330017C7.65858 0.330017 7.35182 0.532654 7.21791 0.846619L5.39259 5.12006L0.773203 5.53937C0.43458 5.57062 0.147837 5.79999 0.0418798 6.12335C-0.0634669 6.44733 0.0338231 6.80267 0.289927 7.02728L3.78126 10.0887L2.75184 14.6226C2.67652 14.956 2.80592 15.3007 3.08253 15.5007C3.23121 15.6087 3.40589 15.6627 3.58119 15.6627C3.73182 15.6627 3.88258 15.6226 4.01722 15.5421L7.99989 13.1607L11.9818 15.5421C12.2739 15.7166 12.6412 15.7006 12.9172 15.5007C13.1939 15.3007 13.3233 14.956 13.2479 14.6226L12.2185 10.0887L15.7098 7.02728C15.9658 6.80267 16.0632 6.44806 15.9579 6.12335Z"
+                                                    fill="#97E0C7"></path>
+                                            </svg></span>
+                                        <span>Domain Name + Business Email</span>
+                                    </li>
+
+                                </ul>
+
+                                <!--Special offer end-->
+
+
+
+                                <ul class="benifits-list">
+                                    {% comment %} <li>{{ package.feature | safe }}</li> {% endcomment %}
+                                    <li>Preparing & Filing the Articles of Organization</li>
+                                    <li>Unlimited Name Searches</li>
+                                    <li>FREE Registered Agent Service for a year!</li>
+                                    <li>EIN Business Tax Number</li>
+                                    <li>IRS Form 2553</li>
+                                    <li>Corporation Bylaws</li>
+                                    <li>Banking Resolution</li>
+                                    <li>Lifetime Company Alerts</li>
+                                    <li>Online Access Dashboard</li>
+                                    <li>Unlimited Phone & Email Support</li>
+                                    <li>Business Banking Account</li>
+                                    <li>Business Tax Consultation</li>
+                                </ul>
+
+                                <div style="margin-left: 60px ; margin-bottom:30px;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    {% comment %} {% endfor %} {% endcomment %}
+                    <!-- Platinum  card end here -->
+
+                    <!----- gold card start here ------- -->
+
+
+
+
+
+
+
+
+                    <div class="col-12 col-lg-4 mt-4">
+
+                        <div class="card" style="background-color: #fcfcfc">
+                            <div class="card-header">
+                                <h4 class="card-title">Gold</h4>
+                                <p class="card-text">Comprehensive features
+                                    to get your business started</p>
+                            </div>
+                            <div class="card-body">
+                                <img class="card-img-top mx-auto d-block" style="width:80px;"
+                                    src="{% static 'images/plane.png' %}">
+                                <p class="price" style="margin-bottom:0;">
+                                    <!-- $<span>549</span> -->
+                                </p>
+                                <p class="price-desc" style="margin-bottom: 24px;">
+                                    Comprehensive features to get your business started
+                                </p>
+
+
+
+
+
+
+                                {% comment %} <a href="{% url 'bgd_consultancy_app:booking' %}"
+                                    style="text-decoration: none;">
+
+                                    <button class="btn1 " data-package="Gold">
+                                        Get the package <i class="fa-solid fa-arrow-right" style="margin-left: 5px;">
+                                        </i></button>
+                                </a> {% endcomment %}
+
+
+                                <ul class="fees"></ul>
+
+                            </div>
+                            <div class="card-footer">
+                                <p style="text-align:center" ;><strong>INCLUDES:</strong></p>
+
+                                <ul class="benifits-list">
+                                    <li>Preparing & Filing the Articles of Organization</li>
+                                    <li>Unlimited Name Searches</li>
+                                    <li>FREE Registered Agent Service for a year!</li>
+                                    <li>EIN Business Tax Number</li>
+                                    <li>IRS Form 2553</li>
+                                    <li>Corporation Bylaws</li>
+                                    <li>Banking Resolution</li>
+                                    <li>Lifetime Company Alerts</li>
+                                    <li>Online Access Dashboard</li>
+                                    <li>Unlimited Phone & Email Support</li>
+                                    <li>Business Banking Account</li>
+                                    <li>Business Tax Consultation</li>
+                                </ul>
+                                <!--  -->
+                                <br><br><br>
+                                <!--  -->
+                                <div style="margin-left: 60px ; margin-bottom:30px;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-lg-4 mt-4">
+                        <div class="card" style="background-color: #fcfcfc">
+                            <div class="card-header">
+                                <h4 class="card-title">Silver</h4>
+                                <p class="card-text">Comprehensive features
+                                    to get your business started</p>
+                            </div>
+                            <div class="card-body">
+                                <img class="card-img-top mx-auto d-block" style="width:80px;"
+                                    src="{% static 'images/paper-plane.png' %}">
+                                <p class="price" style="margin-bottom:0;">
+                                    <!-- $<span>549</span> -->
+                                </p>
+                                <p class="price-desc" style="margin-bottom: 24px;">
+                                    Our core features for the lowest price
+                                </p>
+
+                                {% comment %} <a href="{% url 'bgd_consultancy_app:booking' %}"
+                                    style="text-decoration: none;">
+
+                                    <button class="btn1" data-package="Gold">
+                                        Get the package <i class="fa-solid fa-arrow-right" style="margin-left: 5px;">
+                                        </i></button>
+                                </a> {% endcomment %}
+
+
+                                <ul class="fees"></ul>
+                            </div>
+                            <div class="card-footer">
+                                <p style="text-align:center" ;><strong>INCLUDES:</strong></p>
+
+                                <ul class="benifits-list">
+                                    <li>Preparing & Filing the Articles of Organization</li>
+                                    <li>Unlimited Name Searches</li>
+                                    <li>FREE Registered Agent Service for a year!</li>
+                                    <li>Unlimited Phone & Email Support</li>
+                                </ul>
+                                <!--  -->
+                                <br><br><br><br><br><br><br><br><br><br>
+                                <!--  -->
+                                <div style="margin-left: 40px ; margin-bottom:30px;">
+                                    <div style="margin-left: 40px;">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- gold card end here -->
+                <!----- silver card start here ------- -->
+            </div>
+            <!-- gold card end here -->
+
+        </div>
+
+        <br>
+
+        <div class="text-center">
+            <a href="{% url 'bgd_consultancy_app:index' %}"><button type="button"
+                    class="btn btn-outline-warning">Enjoy Your Package</button></a>
+        </div>
+</div>
+</div>
+
+</section>
+
+</div>
+
+
+{% endblock %}

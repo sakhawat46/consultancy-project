@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'css/contact_us.css' %}">
+
+<div class="container" style="margin-left: 10%; margin-right: 10%; margin-top: 150px; margin-bottom: 5%;">
+
+
+    
+    <!--
+    ----------------------- -------   
+        main body section start
+    -------------------------------
+    -->
+
+    <!-- 
+    -----------------------------------------
+        text and image part section start
+    -----------------------------------------
+    -->
+    <section class="container main-body">
+        <div class="half-width half-width-text">
+            <div class="text-btn">
+                <h1 class="fw-bold">Message From <span class="get-started-text-color">C.E.O</span></h1>
+                <h5 class="text-color mt-4 mb-4">“First of all, Thank you for taking the time to read my message. The
+                    purpose of this message is to help to build business relations between you & me. All clients are
+                    valuable for me, & I want to keep business relations forever. If there is any complaint regarding my
+                    service & solution, Kindly feel free to contact me, Although there is a contact support page.”</h5>
+                <h4><span class="text-dark fw-bold">“Shafiqul Islam”</span></h4>
+            </div>
+        </div>
+
+        <div class="half-width half-width-image">
+            <img class="img-fluid image-rounded w-100" src="{% static 'images/md.jpg' %}" alt="">
+        </div>
+    </section>
+    <!-- 
+    -----------------------------------------
+        text and image part section end
+    -----------------------------------------
+    -->
+
+
+
+
+    <!-- 
+    --------------------------------------
+        Client Dashboard section start
+    --------------------------------------
+    -->
+    <section class="container text-center section-gap">
+        <h1 class="fw-bold mb-4">Our Mission - We're Here to Help</h1>
+        <h5 class="text-color mb-4">BGD ONLINE LIMITED’S main slogan is “Making Changes”. <br> We work together to make
+            a positive change. We started<br> our journey back in 2009 as a private limited company. Since <br> then we
+            make a lot of initiatives. We gather a vast experience as an <br> IT related services and products provider.
+        </h5>
+    </section>
+    <!-- 
+    ------------------------------------
+        Client Dashboard section end
+    ------------------------------------
+    -->
+
+
+
+    <!-- 
+    --------------------------
+        Contact Form start
+    --------------------------
+     -->
+    {% comment %} <section class="container text-center section-gap">
+        <h1 class="fw-bold mb-4">Client Support Request</h1>
+        <h5 class="text-color mb-4">Please provide contact information</h5>
+
+        <div class="container my-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4 p-4 m-2">
+                    <p class="d-flex justify-content-start contact-details">Name</p>
+                    <input placeholder="Name:" type="text" id="name" name="name" size="30" style="height:40px;"
+                        required>
+                </div>
+                <div class="col-lg-4 p-4 m-2">
+                    <p class="d-flex justify-content-start contact-details">Email</p>
+                    <input placeholder="Email:" type="email" id="email" name="email" size="30" style="height:40px;"
+                        required>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4 p-4 m-2">
+                    <p class="d-flex justify-content-start contact-details">Number</p>
+                    <input placeholder="Phone Number:" type="tel" name="tel" id="tel" size="30" style="height:40px;"
+                        required>
+                </div>
+                <div class="col-lg-4 p-4 m-2">
+                    <p class="d-flex justify-content-start contact-details">Order Number</p>
+                    <input placeholder="Order Number" type="tel" name="tel" id="tel" size="30" style="height:40px;"
+                        required>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 p-4 m-2">
+                    <p class="d-flex justify-content-start contact-details">Text-area</p>
+                    <textarea class="text-area" placeholder="Message:" name="textarea" id="textarea" cols="93"
+                        rows="6"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-warning text-light fw-bold">Submit</button>
+        </div>
+    </section> {% endcomment %}
+    <!-- 
+    ------------------------
+        Contact Form end
+    ------------------------
+     -->
+
+
+
+
+    <!-- 
+    --------------------------------
+        contact Us Section Start
+    --------------------------------
+    -->
+    <section class="container section-gap">
+        <h1 class="fw-bold text-black text-center">Contact <span class="get-started-text-color">Us</span></h1>
+        <h5 class="text-color mt-4 mb-4 text-center">820, Mamun Tower(8th floor),
+            Shewrapara, Mirpur, Dhaka-1216</h5>
+
+        <div class="container text-center my-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4 p-4 m-1 blog-details">
+                    <h5>Phone: +88 019-72379494</h5>
+                </div>
+                <div class="col-lg-4 p-4 m-1 blog-details">
+                    <h5>Mail: info@bgdonline.net</h5>
+                </div>
+            </div>
+
+            <h6 class="text-color mt-5 mb-4 text-center">Phone support available Saturday - Thursday from 9 a.m. to 6
+                p.m. BDT</h6>
+        </div>
+    </section>
+    <!-- 
+    ------------------------------
+        contact Us Section end
+    ------------------------------
+    -->
+
+
+
+
+    <!-- 
+    --------------------------------
+        Google Map Section Start
+    --------------------------------
+    -->
+    <section class="container">
+        <div class="iframe">
+            <iframe width="600" height="500" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Mamun%20Tower,%20Mamun%20Tower,%20Begum%20Rokeya%20Avenue,%20Dacca&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          </div>
+    </section>
+    <!-- 
+    ------------------------------
+        Google Map Section end
+    ------------------------------
+    -->
+
+    <!--
+    ----------------------------    
+        main body section end
+    ----------------------------        
+    -->
+
+
+
+
+
+</div>
+
+{% endblock %}

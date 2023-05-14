@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% load static %}
+
+
+{% block body %}
+
+
+<div class="container" style="margin-bottom: 100px; margin-top: 150px; padding-right: 10%; padding-left: 10%;">
+
+<h1 class="text-center">Start Your Business With Confidence</h1>
+<br>
+
+<form method="post" id="personForm" data-cities-url="{% url 'bgd_consultancy_app:ajax_load_cities' %}" novalidate>
+  {% csrf_token %}
+  <table>
+    <!-- {{ form.as_table }} -->
+  </table>
+  <!-- <h6>Enter Your Comapny Name or Email*</h6> -->
+  {% for field in form.visible_fields %}
+  <div class="form-group">
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {{ field|add_class:'form-control'}}
+    {% for error in field.errors %}
+    <span class="help-block">{{ error }}</span>
+    {% endfor %}
+  </div>
+  {% endfor %}
+  <br>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-outline-warning">Register Now</button>
+  </div>
+
+</form>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+
+
+<script>
+  //City
+  $("#id_country").change(function () {
+    var url = $("#personForm").attr("data-cities-url");
+    var countryId = $(this).val();
+    $.ajax({
+      url: "{% url 'bgd_consultancy_app:ajax_load_cities' %}",
+      data: {
+        'country': countryId
+      },
+      success: function (data) {
+        $("#id_city").html(data);
+      }
+    });
+  });
+
+
+  // Business
+  $("#id_city").change(function () {
+    var url = $("#personForm").attr("data-cities-url");
+    var cityId = $(this).val();
+    $.ajax({
+      url: "{% url 'bgd_consultancy_app:ajax_load_business' %}",
+      data: {
+        'city': cityId
+      },
+      success: function (data) {
+        $("#id_business").html(data);
+      }
+    });
+
+  });
+
+  //Package
+  $("#id_business").change(function () {
+    var url = $("#personForm").attr("data-cities-url");
+    var businessId = $(this).val();
+    $.ajax({
+      url: "{% url 'bgd_consultancy_app:ajax_load_packages' %}",
+      data: {
+        'business': businessId
+      },
+      success: function (data) {
+        $("#id_package").html(data);
+      }
+    });
+  });
+
+
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,178 @@
+/*
+--------------------------
+    header section css
+--------------------------
+*/
+header div a img {
+  height: 5rem;
+  width: 5rem;
+}
+
+
+/* 
+--------------------
+    nav item css
+--------------------
+ */
+.bg-color {
+  background-color: #fff;
+}
+
+.main-nav-item {
+  margin-left: 1.5rem;
+}
+
+.dropdown-menu a:hover {
+  background: white;
+  color: #ffc107;
+  font-size: 1.05rem;
+}
+
+.dropdown-menu a small {
+  font-size: 1rem;
+}
+
+.dropdown-border {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 10px 10px 35px lightgray;
+}
+
+.btn-border-gap {
+  margin-right: 1.5rem;
+}
+
+.business-btn{
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.btn-border-gap1{
+  margin-top: 2rem;
+}
+
+.link-decoration {
+  text-decoration: none;
+}
+
+.link-color {
+  color: #ffc107;
+}
+
+
+
+
+/* 
+---------------------
+    main body css
+---------------------    
+*/
+.main-body {
+  display: flex;
+  padding-top: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 391px) {
+  .main-body {
+    display: grid;
+  }
+}
+
+.half-width {
+  display: flex;
+  align-items: center;
+}
+
+.get-started-text-color{
+  color: #ffc107;
+}
+
+.video-text-hover:hover{
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 391px) {
+  .video-section{
+    width: 100%;
+  }
+}
+
+.business-Ethics-section{
+  display: flex;
+  text-align: center;
+}
+
+.two-part-gif{
+  width: 50%;
+}
+
+@media only screen and (max-width: 391px) {
+  .two-part-gif{
+    width: 75%;
+  }
+  .business-Ethics-section{
+    display: grid;
+  }
+  .gif-item{
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+}
+
+
+
+/* 
+------------------
+    footer css
+------------------
+ */
+.text-color {
+  color: #757575;
+}
+
+.footer-clean ul li {
+  list-style-type: none;
+}
+
+.footer-clean ul li a {
+  text-decoration: none;
+  color: #757575;
+}
+
+.footer-link a:hover {
+  background: white;
+  color: #ffc107;
+  font-size: 1.05rem;
+}
+
+.fb-icon {
+  color: #3b5998;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.linkedin-icon {
+  color: #0072b1;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.youtube-icon {
+  color: #c4302b;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.instagram-icon {
+  color: #C13584;
+  font-size: 30px;
+}
+
+.social-item{
+  text-align: center;
+}
+.copyright {
+  margin-top: 8px;
+}

@@ -1,0 +1,117 @@
+.price {
+    color: #1e1e1e;
+    text-align: center;
+    font-family: IncfileBold,sans-serif;
+    font-size: 20px;
+    line-height: 50px;
+    /* margin-left: 5px; */
+    margin-right: 7px;
+}
+.col-lg-4{
+    display: flex;
+    align-items: stretch;
+}
+.price-desc{
+    font-size: 15px;
+    text-align: center;
+    line-height: 24px;
+    width: 100%;
+    color: #4e4e4e;
+    font-family: IncfileRegular,san-serif;
+}
+
+.btn1 {
+    align-items: center;
+    text-decoration: none;
+    background-color: #fd8550;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: IncfileBold;
+    font-size: 15px;
+    height: auto;
+    width: 79%;
+    justify-content: center;
+    line-height: 24px;
+    padding: 5px 20px;
+    /* margin-right: 10px; */
+    margin-left: 24px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s ease,color .3s ease,.3s ease;
+ 
+}
+
+.card-title{
+    text-decoration: none;
+    text-align: center;
+}
+
+.card-text{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(235, 164, 72);
+}
+
+
+ul {
+    list-style: none;
+  }
+  
+  .benifits-list  li:before {
+    content: '✓';
+    color: #f308cc;
+    /* font-size:10px; */
+  }
+
+  .card-footer ul li{
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .fa-star {
+    color: #f7c335;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .col-lg-3{
+    margin-top: 90px;
+    margin-left: 50px;
+  }
+
+   .border{
+    width: 60%;
+    margin-right:16px;
+   background-color: whitesmoke;
+  }
+
+
+ 
+
+
+
+  @media only screen 
+  and (min-device-width: 768px)
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .col-lg-4{
+      display: flex;
+      align-items: stretch;
+      margin-left: 20%;
+ 
+  }
+
+  .card-footer ul li{
+    font-size: 17px;
+    margin-right: 5px;
+  }
+
+
+}

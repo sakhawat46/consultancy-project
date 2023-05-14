@@ -1,0 +1,392 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/form_an_llc.css' %}">
+
+<div class="container" style="margin-bottom: 100px; margin-top: 150px;">
+
+
+    
+    <!--
+    ----------------------- -------   
+        main body section start
+    -------------------------------
+    -->
+
+    <!-- 
+    -----------------------------------------
+        text and image part section start
+    -----------------------------------------
+    -->
+    <section class="container main-body section-gap">
+        <div class="half-width half-width-text">
+            <div class="text-btn">
+                <h1 class="fw-bold">Form Your Free LLC and Kickstart Your Dream Business with BGD Consultancy</h1>
+                <h5 class="text-color mt-4 mb-4">Easy, stress-free and personalized business formation for clever people
+                    with big ideas.</h5>
+                <button class="btn btn-outline-warning border-5 rounded-pill btn-border-gap mb-4 business-btn"
+                    type="submit"><a class="link-decoration link-color" href="{% url 'bgd_consultancy_app:package' %}"><b class="business-btn">Form Your Free
+                            LLC Now <i class="fa-solid fa-arrow-right"></i></b></a>
+                </button>
+            </div>
+        </div>
+
+        <div class="half-width half-width-image">
+            <img class="img-fluid w-100 rounded-pill" src="{% static 'images/office8.jpg' %}" alt="">
+        </div>
+    </section>
+    <!-- 
+    -----------------------------------------
+        text and image part section end
+    -----------------------------------------
+    -->
+
+
+
+    <!-- 
+    -------------------------------------------
+        forming and expensive section start
+    -------------------------------------------
+    -->
+    <section class="container text-center section-gap">
+        <h1 class="fw-bold">Forming an LLC Can Be <br> Daunting and Expensive</h1>
+        <p class="my-5 size"><span><i class="fa-solid fa-bolt"></i></span></p>
+        <h5 class="text-color mb-4">There's a lot that goes into filing an LLC. With various <br> state requirements,
+            multiple steps and a lot of <br> important documentation, even the smallest mistake <br> can end up costing
+            you. That's where we come in.</h5>
+        <button class="btn btn-outline-warning border-5 rounded-pill btn-border-gap mb-4 business-btn" type="submit"><a
+                class="link-decoration link-color" href="{% url 'bgd_consultancy_app:package' %}"><b class="business-btn">Free LLC Now <i
+                        class="fa-solid fa-arrow-right"></i></b></a>
+        </button>
+    </section>
+    <!-- 
+    -----------------------------------------
+        forming and expensive section end
+    -----------------------------------------
+    -->
+
+
+
+    <!-- 
+    -----------------------------------------
+        text and image part section start
+    -----------------------------------------
+    -->
+    <section class="container main-body section-gap">
+        <div class="half-width image-half-width">
+            <img class="img-fluid image-rounded w-100" src="{% static 'images/office7.jpg' %}" alt="">
+        </div>
+
+        <div class="half-width text-half-width">
+            <div class="text-btn">
+                <h1 class="fw-bold">Save Money and Time with BGD’s $0 (+ state fee) LLC Registration</h1>
+                <h5 class="text-color mt-4 mb-4"><b class="text-dark">Some providers charge $150+</b> for LLC formation,
+                    but our streamlined processes keep costs down so you get the most bang for your buck. Register your
+                    LLC for $0 (+ the state fee) and free up time to focus on other things.</h5>
+
+            </div>
+        </div>
+    </section>
+    <!-- 
+    -----------------------------------------
+        text and image part section end
+    -----------------------------------------
+    -->
+
+
+
+    <!-- 
+    ------------------------------------------
+        Discover the Benefits of LLC start
+    ------------------------------------------
+    -->
+    <section class="container section-gap">
+        <h1 class="fw-bold text-center">Discover the Benefits of Forming Your LLC with BGD</h1>
+
+        <div class="container my-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Get Your EIN Business Tax Number Fast</h5>
+                    <h6 class="text-color">Included free in our Gold and Platinum formation packages; Get your EIN
+                        within one business day.</h6>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Free LLC Filing, Only Pay the State Fee</h5>
+                    <h6 class="text-color">Low-cost, personalized business formation. Because when you’re starting a
+                        business, every dollar counts.</h6>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Prepare & File Your Articles of Organization</h5>
+                    <h6 class="text-color">Every BGD formation package includes assistance drafting, preparing and
+                        filing Articles of Organization.</h6>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Free Registered Agent for the First Year</h5>
+                    <h6 class="text-color">Access your complete and easy-to-use Registered Agent service free for a full
+                        year ($119/annually after that).</h6>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Entrepreneurship Made Easy</h5>
+                    <h6 class="text-color">Get a business banking account, domain name and business email fast with the
+                        Platinum package.</h6>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>No Hidden Fees, No Contracts</h5>
+                    <h6 class="text-color">Get the best user experience and unparalleled value for money. Nobody gives
+                        you more for less.</h6>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Grow Your Business with Tailored Services</h5>
+                    <h6 class="text-color">Get set up with additional business services from within your business
+                        dashboard, when you need them.</h6>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>24/7 Fast and Friendly Customer Service</h5>
+                    <h6 class="text-color">Talk to a dedicated incorporation specialist, not a salesperson, and get
+                        lifetime customer support.</h6>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Never Miss an Important Due Date</h5>
+                    <h6 class="text-color">Get text and email notifications, order updates and compliance alerts from
+                        within your dashboard. </h6>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Modern, Simple, Personalized Dashboard</h5>
+                    <h6 class="text-color">Your business essentials all in one place. Access everything you need,
+                        whenever you need it.</h6>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Customizable Business Contract Templates</h5>
+                    <h6 class="text-color">Available in our Platinum package, these templates help ensure that all your
+                        documents are watertight without hiring a lawyer.</h6>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4
+                        class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i></h4>
+                    <h5>Save Money on Taxes with IRS Form 2553</h5>
+                    <h6 class="text-color">Choose S Corp election so that your LLC is treated as an S Corp for tax
+                        filing purposes.</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+    ----------------------------------------
+        Discover the Benefits of LLC end
+    ----------------------------------------
+
+
+
+    < !-- 
+    ---------------------------
+        video section start
+    ---------------------------
+    -->
+    <section class="container section-gap">
+        <h1 class="fw-bold text-center">See What Our Clients Have to Say…</h1>
+        <h4 class="text-color text-center mt-4 mb-4">“One of the things I really <br> appreciated with BGD is <br> that
+            it took care of everything <br> for me.” <br><span class="text-dark"> Khadijah Suleman, Aloaye Clothing
+                LLC</span></h4>
+        <div class="text-center mt-5">
+            <iframe class="video-section image-rounded" width="560" height="315" src="https://www.youtube.com/embed/QY_oQ0d2aeA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <button
+            class="d-flex justify-content-center align-items-center btn btn-outline-warning border-5 rounded-pill btn-border-gap1 mb-4 business-btn"
+            type="submit"><a class="link-decoration link-color" href="{% url 'bgd_consultancy_app:package' %}"><b class="business-btn">Start your
+                    LLC Now <i class="fa-solid fa-arrow-right"></i></b></a>
+        </button>
+    </section>
+    <!-- 
+    -------------------------
+        video section end
+    -------------------------
+    -->
+
+
+
+    <!-- 
+    ---------------------------------------------
+        Frequently Asked Question - accordion
+    ---------------------------------------------
+    -->
+    <section class="container section-gap">
+        <h1 class="fw-bold text-black text-center mb-3">Common Questions About Starting an<span
+                class="get-started-text-color"> LLC</span>
+        </h1>
+        <div class="row g-3">
+            <div class="col-md-5">
+                <img class="img-fluid image-rounded mt-5" src="{% static 'images/office10.jpg' %}" alt="" />
+            </div>
+            <div class="col-md-7">
+                <!-- accordion -->
+                <div class="accordion mt-5 d-grid gap-3" id="accordionExample">
+                    <!-- first question -->
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button bg-white text-dark fw-bold" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                Can I Get an LLC for Free?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="fw-light text-dark">
+                                    Yes! With our $0 LLC package, you only pay the fees required by your state. BGD’s
+                                    filing services are free. BGD’s standard processing time to pass your data onto the
+                                    relevant state is one day.
+                                    Any person can create an LLC without a professional help, but forming a company will still take some investment because of the required filing fees. These fees can range from $50 to $250, depending on the state. In addition, in certain states, like California, businesses must pay an LLC franchise tax of up to $800 per year.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second question -->
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="
+                      accordion-button
+                      collapsed
+                      bg-white
+                      text-dark
+                      fw-bold
+                    " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                How Much Does Your Service Cost?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="fw-light text-dark">
+                                    Since 2004, we’ve been perfecting our service. Our tech-enabled process efficiencies
+                                    mean we’re able to keep the costs down and pass this incredible value on to you. The
+                                    result is low-cost, personalized business formation with fast and friendly service.
+                                    The Silver Package is $0 + state fee and includes the basics needed to form your
+                                    LLC.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- third question -->
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="
+                      accordion-button
+                      collapsed
+                      bg-white
+                      text-dark
+                      fw-bold
+                    " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Are There Specific Rules for My State?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="fw-light text-dark">
+                                    Each state has specific requirements regarding registered agents, naming rules,
+                                    business licenses etc. Learn more about LLCs in your state and read our free LLC
+                                    state guides here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- fourth question -->
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="
+                      accordion-button
+                      collapsed
+                      bg-white
+                      text-dark
+                      fw-bold
+                    " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                What's My State's Filing Fee for LLCs?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="fw-light text-dark">
+                                    Filing costs to form an LLC can vary from state to state. Use our free filing fees
+                                    tool to easily compare state fees before you start your business.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+    ---------------------
+        accordion end
+    ---------------------
+    -->
+
+    <!--
+    ----------------------------    
+        main body section end
+    ----------------------------        
+    -->
+
+
+
+
+</div>
+
+{% endblock %}

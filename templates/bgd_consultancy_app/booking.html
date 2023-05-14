@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block body %}
+
+
+
+<!-- packages section starts  -->
+<div class="container" style="margin-bottom: 100px; margin-top: 150px">
+    <form method="POST">
+        {% csrf_token %}
+
+
+        {% for message in messages %}
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Hey!</strong> {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        
+        
+
+        {% endfor %}
+
+
+        <h1 class="text-center mb-5">COMPANY INFORMATION</h1>
+
+        <div class="row">
+            {% comment %} <div class="col-6">{{ form2.service_package|as_crispy_field }}</div> {% endcomment %}
+            <div class="col-6">{{ form2.company_name|as_crispy_field }}</div>
+            <br />
+            <br />
+            {% comment %} <div class="col-6">{{ form2.company_type|as_crispy_field }}</div> {% endcomment %}
+            <div class="col-6">{{ form2.company_contact|as_crispy_field }}</div>
+        </div>
+        <br />
+
+        {{ form2.company_location|as_crispy_field }}
+
+        <br />
+
+        {{ form2.business_purpose|as_crispy_field }}
+
+        <h1 class="text-center mb-5 mt-5">CUSTOMER INFORMATION</h1>
+
+        <div class="row">
+            <div class="col-6">{{ form1.name|as_crispy_field }}</div>
+            <div class="col-6">{{ form1.email|as_crispy_field }}</div>
+            <div class="col-6">{{ form1.phone_number|as_crispy_field }}</div>
+            <div class="col-6">{{ form1.country|as_crispy_field }}</div>
+            <div class="col-6">{{ form1.city|as_crispy_field }}</div>
+            <div class="col-6">{{ form1.zipcode|as_crispy_field }}</div>
+        </div>
+
+        <br />
+
+        {{ form1.address|as_crispy_field }}
+
+        <div class="text-center">
+            <input type="submit" class="btn btn-outline-success mb-5 mt-5 fw-bold" value="Apply For Consultant" />
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+//templates/Package_dropdown_list_options.html
+
+
+
+<option value="0">Select Your Package</option>
+{% for package in packages %}
+       <option value="{{ package.pk }}">{{ package.name }}</option>
+{% endfor %}

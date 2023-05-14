@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Company Today at BGD Consultancy</title>
+
+    <!-- 
+    --------------
+        favicon
+    --------------  
+    -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+
+    <!--
+    ---------------------
+        bootstrap css
+    ---------------------
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- 
+    ---------------------------
+        Font Awesome  Script
+    ---------------------------
+     -->
+    <script src="https://kit.fontawesome.com/f8e645733d.js" crossorigin="anonymous"></script>
+
+    <!--
+    ------------------
+        custom css
+    ------------------
+    -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<!-- 
+-----------------
+    body start
+-----------------
+ -->
+
+<body>
+
+    <!--
+    ------------------- 
+        header start
+    -------------------
+    -->
+    <header>
+        <section>
+            <!-- 
+            ----------------------
+                nav item start
+            ----------------------
+             -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light bg-color">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{% url 'bgd_consultancy_app:home' %}"><img
+                            src="{% static 'images/BGD_icon.png' %}" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <!-- 
+                            --------------------
+                                How It Works
+                            --------------------
+                             -->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="{% url 'bgd_consultancy_app:how_it_work' %}"><b class="main-nav-item">How It
+                                        Works</b></a>
+                            </li>
+
+                            <!-- 
+                            ---------------
+                                Services
+                            ---------------
+                             -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b class="main-nav-item">Services</b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-border">
+                                    <li><a class="dropdown-item"
+                                            href="{% url 'bgd_consultancy_app:form_an_llc' %}"><b>Form an LLC</b>
+                                            <br><small>The most popular
+                                                choice for
+                                                business owners.</small></a></li>
+                                    <li><a class="dropdown-item" href="{% url 'bgd_consultancy_app:form_c_corporation' %}"><b>Form a C Corporation</b> <br><small>Big
+                                                business? Opt
+                                                for a C Corp.</small></a></li>
+                                    <li>
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'bgd_consultancy_app:form_s_corporation' %}"><b>Form an S Corporation</b> <br><small>Save
+                                                money
+                                                on
+                                                taxes as your business grows.</small></a></li>
+                                    <li><a class="dropdown-item" href="{% url 'bgd_consultancy_app:form_non_profit' %}"><b>Form a Non Profit</b> <br><small>A business
+                                                that makes the world a better place.</small></a></li>
+                                </ul>
+                            </li>
+
+                            <!-- 
+                            -----------------------
+                                Resource Center
+                            -----------------------
+                             -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b class="main-nav-item">Resource Center</b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-border">
+                                    <li><a class="dropdown-item resource-center-hover"
+                                            href="{% url 'bgd_consultancy_app:business_guide' %}">Business Industry
+                                            Guides</a>
+                                    </li>
+                                    <li><a class="dropdown-item resource-center-hover"
+                                            href="{% url 'bgd_consultancy_app:business_name_generator' %}">Business Name
+                                            Generator</a>
+                                    </li>
+
+                                    <li><a class="dropdown-item resource-center-hover" href="#">Business Name Search
+                                            Tool</a></li>
+                                    <li><a class="dropdown-item resource-center-hover" href="#">Business Startup
+                                            Guide</a>
+                                    </li>
+                                    <li><a class="dropdown-item resource-center-hover" href="#">Financial Management</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- 
+                            ----------------
+                                About Us
+                            ----------------
+                             -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b class="main-nav-item">About Us</b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-border">
+                                    <li><a class="dropdown-item" href="{% url 'bgd_consultancy_app:blog' %}"><b>Visit
+                                                the Blog</b></a></li>
+                                    <li><a class="dropdown-item"
+                                            href="{% url 'bgd_consultancy_app:contact_us' %}"><b>Contact Us !</b></a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><b>Why Choose Us ?</b></a></li>
+                                    <li><a class="dropdown-item" href="#"><b>Testimonials</b></a></li>
+                                    <li><a class="dropdown-item" href="#"><b>Courses...</b></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <form class="d-flex media-queries" role="search">
+                            <!-- 
+                            --------------------
+                                phone number
+                            --------------------
+                             -->
+                            <button class="btn btn-border-gap" type="submit"><a class="link-decoration" href="#"><span
+                                        class="link-color"><i class="fa-solid fa-phone"></i></span>
+                                    <strong class="link-color">+88019-72379494</strong></a>
+                            </button>
+
+                            <!-- 
+                            -------------
+                                Login
+                            -------------
+                             -->
+
+                            {% if user.is_authenticated %}
+
+                            <a href="{% url 'login_app:profile' %}" class="btn btn-outline-warning border-3 rounded-pill btn-border-gap">
+                                <b>Profile</b>
+                            </a>
+
+                            {% else %}
+
+                            <a href="{% url 'login_app:register' %}" class="btn btn-outline-warning border-3 rounded-pill btn-border-gap">
+                                <b>Register</b>
+                            </a>
+
+                            {% endif %}
+
+
+                            <!-- 
+                            -----------------------
+                                Incorporate Now
+                            -----------------------
+                             -->
+
+                            <a href="{% url 'bgd_consultancy_app:index' %}"
+                                class="btn btn-outline-warning border-3 rounded-pill btn-border-gap">
+                                <b>Incorporate Now</b>
+                            </a>
+
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- 
+            --------------------
+                nav item end
+            --------------------
+             -->
+
+        </section>
+    </header>
+    <!-- 
+    ------------------
+        header end
+    ------------------
+     -->
+
+
+
+    {% block body %}
+
+
+    {% endblock %}
+
+
+
+
+    <!-- 
+    -------------------
+        footer start
+    -------------------
+     -->
+    <footer>
+        <div class="footer-clean">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-6 col-md-3 item">
+                        <h6 class="text-color"><span class="get-started-text-color">Services</span></h6>
+                        <ul class="no-decoration footer-link">
+                            <li><a href="#">Submit an Annual Report</a></li>
+                            <li><a href="#">Foreign Qualification</a></li>
+                            <li><a href="#">Get a Certificate of Good Standing</a></li>
+                            <li><a href="#">Amendment</a></li>
+                            <li><a href="#">Company Name Change</a></li>
+                            <li><a href="#">Renew Registered Agent</a></li>
+                            <li><a href="#">Get an EIN / TAX Number</a></li>
+                            <li><a href="#">Free Tax Consultation</a></li>
+                            <li><a href="#">Choose a Name or DBA</a></li>
+                            <li><a href="#">File for an S Corporation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 item">
+                        <h6 class="text-color"><span class="get-started-text-color">Resources</span></h6>
+                        <ul class="footer-link">
+                            <li><a href="#">Filing Times</a></li>
+                            <li><a href="#">Why Choose Us</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Business Type Comparison Chart</a></li>
+                            <li><a href="#">LLC Information by State</a></li>
+                            <li><a href="#">Corporation Information by State</a></li>
+                            <li><a href="#">Get a Corporate / LLC Kit</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 item">
+                        <h6 class="text-color"><span class="get-started-text-color">Quick Links</span></h6>
+                        <ul class="footer-link">
+                            <li><a href="#">Get a Corporate / LLC Kit</a></li>
+                            <li><a href="#">Compare Entities</a></li>
+                            <li><a href="#">Manage Your Company</a></li>
+                            <li><a href="#">Check Order Status</a></li>
+                            <li><a href="#">Research Tool</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Read the Blog</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 item">
+                        <h6 class="text-color"><span class="get-started-text-color">Support</span></h6>
+                        <ul class="footer-link">
+                            <li><a href="#">Contact Us: New Sales</a></li>
+                            <li><a href="#">BDG Partnerships</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                            <li><a href="#">Sitemaps</a></li>
+                            <li><a href="#">Cancellation Policy</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Legal Disclaimer</a></li>
+                            <li><a href="#">Legal Disclaimer</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 
+                    ------------------------
+                        social site icon
+                    ------------------------
+                    -->
+                    <div class="col-lg-3 social-item">
+                        <a class="fb-icon" href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="linkedin-icon" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a class="youtube-icon" href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="instagram-icon" href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <p class="copyright"><span class="get-started-text-color text-center fw-bold"><small>© 2022. BGD
+                                    Consultancy All Rights Reserved.</small></span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 
+    ------------------
+        footer end
+    ------------------
+     -->
+
+
+    <!-- 
+    ---------------------------
+        bootstrap js Script
+    ---------------------------
+     -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/dependant.js' %}"></script>
+
+    <!-- 
+----------------
+    body end
+----------------
+ -->
+</body>
+
+</html>

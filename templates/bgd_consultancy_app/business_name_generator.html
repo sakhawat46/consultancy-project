@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'css/business_name_generator.css' %}">
+
+<div class="container" style="margin-left: 10%; margin-right: 10%; margin-top: 150px; margin-bottom: 5%;">
+
+
+    
+
+    <!--
+    ----------------------- -------   
+        main body section start
+    -------------------------------
+    -->
+
+    <!-- 
+    -----------------------------------------
+        text and image part section start
+    -----------------------------------------
+    -->
+    <section class="container main-body">
+        <div class="half-width half-width-text">
+            <div class="text-btn">
+                <h1 class="fw-bold">Business Name Generator</h1>
+                <h5 class="text-color mt-4 mb-4">Generate a short, brand able business name using artificial
+                    intelligence. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
+                {% comment %} <button class="btn btn-outline-warning border-5 rounded-pill btn-border-gap mb-4 business-btn"
+                    type="submit"><a class="link-decoration link-color" href="#"><b class="business-btn">Choose your
+                            Business Name <i class="fa-solid fa-arrow-right"></i></b></a>
+                </button> {% endcomment %}
+            </div>
+
+
+        </div>
+        <div class="half-width half-width-image">
+            <img class="img-fluid image-rounded w-100" src="{% static 'images/office9.jpg' %}" alt="">
+        </div>
+    </section>
+    <!-- 
+    -----------------------------------------
+        text and image part section end
+    -----------------------------------------
+    -->
+
+
+
+
+    <!-- 
+    ---------------------
+        video section
+    ---------------------
+    -->
+    <section class="container section-gap">
+        <h1 class="fw-bold text-center">How to Use a Business Name <span class="get-started-text-color">Generator</span>
+        </h1>
+        <!-- <h4 class="text-color text-center mt-4 mb-4"><span class="get-started-text-color video-text-hover">Watch this
+                short video to see</span></h4> -->
+        <div class="text-center mt-5">
+            <iframe class="video-section image-rounded" width="560" height="315"
+                src="https://www.youtube.com/embed/NKWzom27smA" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- 
+    -------------------------
+        video section end
+    -------------------------
+    -->
+
+
+
+
+    <!-- 
+    -----------------------------------
+        Business card section start 
+    -----------------------------------
+    -->
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4 d-flex justify-content-center mt-3">
+            <div class="col">
+                <div class="card h-100 card-decoration text-center">
+                    <p class="idea-icon mb-4"><span><i class="fa-solid fa-lightbulb"></i></span></p>
+                    <div class="card-body">
+                        <h5 class="card-title">Get name ideas</h5>
+                        <p class="card-text text-color">We create short, punchy, memorable brand names using a
+                            combination of your keywords and artificial intelligence. The more specific you are, the
+                            better the result.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card-decoration text-center">
+                    <p class="brand-icon mb-4"><span><i class="fa-solid fa-id-card"></i></span></p>
+                    <div class="card-body">
+                        <h5 class="card-title">Build a Brand</h5>
+                        <p class="card-text text-color">The perfect name is a great first step. Use it as a foundation
+                            for your entire brand and approach to get recognition across all your marketing channels.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border border-0 card-decoration text-center">
+                    <p class="visual-icon mb-4"><span><i class="fa-solid fa-thumbs-up"></i></span></p>
+                    <div class="card-body">
+                        <h5 class="card-title">Create a Visual Identity</h5>
+                        <p class="card-text text-color">Our Business Name Generator creates results in a wide variety of
+                            colors, fonts and backgrounds. Use these as inspiration for the ideal design that represents
+                            your brand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+    ---------------------------------
+        Business card section end 
+    ---------------------------------
+    -->
+
+
+
+
+    <!-- 
+    -----------------------------------------
+        Right Business Name section start
+    -----------------------------------------
+    -->
+    <section class="container text-center section-gap">
+        <h1 class="fw-bold">Why Choosing the Right Business <br> Name Is Important</h1>
+        <h5 class="text-color mt-4">Your business identity, or brand, shapes how customers see you <br> and influences
+            their decision to buy. <strong class="text-primary">A short, distinctive <br> name</strong> shows confidence
+            and creates excitement around your products and <br> services. Our Business Name Generator will help you
+            <strong class="text-primary">create unforgettable,<br> unique, simple business names</strong> that showcase
+            your business values in the best <br> possible way.</h5>
+    </section>
+    <!-- 
+    ---------------------------------------
+        Right Business Name section end
+    ---------------------------------------
+    -->
+
+
+
+
+    <!-- 
+    ---------------------
+        video section
+    ---------------------
+    -->
+    <section class="container section-gap">
+        <h1 class="fw-bold text-center">How to Brainstorm Company Names</h1>
+        <!-- <h4 class="text-color text-center mt-4 mb-4"><span class="get-started-text-color video-text-hover">Watch this
+                short video to see</span></h4> -->
+        <div class="text-center mt-5">
+            <iframe class="video-section image-rounded" width="560" height="315"
+                src="https://www.youtube.com/embed/ZskqgrXViUA" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <h5 class="text-center text-color mt-4">The Business Name Generator uses the keywords you provide us with, <br>
+            then sprinkles on a little AI magic to create dozens of possible business names. <br> You can start simply,
+            with just one or two keywords, and then <br> enter additional words to fine-tune your results. There are
+            plenty of ways <br> to create the initial keywords. Brainstorm words associated with:</h5>
+    </section>
+    <!-- 
+    -------------------------
+        video section end
+    -------------------------
+    -->
+
+
+
+
+    <!-- 
+    -------------------------------
+        grid card section start
+    -------------------------------
+    -->
+    <section class="container">
+        <div class="container my-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4 class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i>
+                    </h4>
+                    <h5 class="mt-3">The specific niche for your business</h5>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4 class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i>
+                    </h4>
+                    <h5 class="mt-3">The types of products and services you offer</h5>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4 class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i>
+                    </h4>
+                    <h5 class="mt-3">Who your ideal audience is</h5>
+                </div>
+                <div class="col-lg-5 p-4 m-2 blog-details">
+                    <h4 class="text-center fw-bold steps-count d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-check"></i>
+                    </h4>
+                    <h5 class="mt-3">The goals you have for your business</h5>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="text-center text-color">For more inspiration,<span class="text-primary"> use a thesaurus</span> to find and include similar words.</h5>
+    </section>
+   <!-- 
+    -----------------------------
+        grid card section end
+    -----------------------------
+    -->
+
+    <!--
+    ----------------------------    
+        main body section end
+    ----------------------------        
+    -->
+
+
+</div>
+
+{% endblock %}

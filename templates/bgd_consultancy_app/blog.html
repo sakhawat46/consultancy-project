@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+<div class="container" style="margin-bottom: 100px; margin-top: 150px;">
+
+
+    <!---------- Blog Section Start -------->
+
+    <section class="blog-card">
+        <div class="card-container p-3 d-flex flex-sm-column flex-md-row justify-content-center">
+
+            <!-- Grid start -->
+
+            <div class="row">
+
+                {% for blog in all_blog %}
+
+                <div class="col-12 col-md-6 col-lg-3 blog-banner">
+                    <!-- First Blog start -->
+
+                    <div class="card" style="margin-bottom: 50px;">
+                        <a href="{% url 'bgd_consultancy_app:blog_details' slug=blog.slug %}"><img src="{{ blog.blog_image.url }}" class="card-img-top"
+                                alt="" /></a>
+                        <div class="card-body">
+                            <a href="{% url 'bgd_consultancy_app:blog_details' slug=blog.slug %}" style="text-decoration: none;"><h5 class="card-title">
+                                {{ blog.blog_title }}
+                            </h5></a>
+
+                            <p>
+                                <h6>{{ blog.publish_date }}</h6>
+                            </p>
+
+                            <p class="card-text">
+                                {{ blog.short_description | linebreaks | slice:":145" }}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- First Blog End -->
+
+                </div>
+
+                {% endfor %}
+
+                {% comment %} <div class="col-12 col-md-6 col-lg-3 blog-banner">
+
+                    <!-- second Blog start -->
+                    <div class="card" style="margin-bottom: 50px;">
+                        <img src="{% static 'images/how.jpg' %}" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Single Member vs. Multi-Member LLC: Everything You Need to Know
+                            </h5>
+
+                            <p>
+                                October 31, 2022
+                                <a href="" style="text-decoration: none">Carrie Buchholz-Powers</a>
+                                in
+                                <a href="" style="text-decoration: none">Form a Business Today</a>.
+                            </p>
+
+                            <p class="card-text">
+                                The difference between a single-member LLC vs. a multi-member LLC
+                                might sound simple, but it's a little more nuanced than you might
+                                think.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- second Blog end -->
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3  blog-banner">
+
+                    <!-- third Blog start -->
+                    <div class="card" style="margin-bottom: 50px;">
+                        <img src="{% static 'images/consultant.jpg' %}" class="card-img-top" alt="" />
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Single Member vs. Multi-Member LLC: Everything You Need to Know
+                            </h5>
+
+                            <p>
+                                October 31, 2022
+                                <a href="" style="text-decoration: none">Carrie Buchholz-Powers</a>
+                                in
+                                <a href="" style="text-decoration: none">Form a Business Today</a>.
+                            </p>
+
+                            <p class="card-text">
+                                The difference between a single-member LLC vs. a multi-member LLC
+                                might sound simple, but it's a little more nuanced than you might
+                                think.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- third Blog End -->
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3  blog-banner">
+
+                    <!-- third Blog start -->
+                    <div class="card" style="margin-bottom: 50px;">
+                        <img src="{% static 'images/consultant.jpg' %}" class="card-img-top" alt="" />
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Single Member vs. Multi-Member LLC: Everything You Need to Know
+                            </h5>
+
+                            <p>
+                                October 31, 2022
+                                <a href="" style="text-decoration: none">Carrie Buchholz-Powers</a>
+                                in
+                                <a href="" style="text-decoration: none">Form a Business Today</a>.
+                            </p>
+
+                            <p class="card-text">
+                                The difference between a single-member LLC vs. a multi-member LLC
+                                might sound simple, but it's a little more nuanced than you might
+                                think.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- third Blog End -->
+                </div> {% endcomment %}
+
+            </div>
+
+
+            <!-- Grid End -->
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <!------ Blog Section End ------>
+
+
+</div>
+
+{% endblock %}

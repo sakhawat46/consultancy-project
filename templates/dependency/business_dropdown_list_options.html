@@ -1,0 +1,11 @@
+//templates/Business_dropdown_list_options.html
+
+
+
+
+
+<option value="0">Select Your Business Type</option>
+
+{% for business in business %}
+        <option value="{{ business.pk }}">{{ business.name }}</option>
+{% endfor %}
