@@ -50,7 +50,7 @@ def booking(request):
                 form1.save()
                 form2.save()
                 messages.success(request, "Booking Successfully Completed.")
-                return HttpResponseRedirect(reverse('bgd_consultancy_app:booking'))
+                return HttpResponseRedirect(reverse('payment_app:landing'))
         diction = {'form1':form1, 'form2':form2}
         return render(request,'bgd_consultancy_app/booking.html', context = diction)
     else:

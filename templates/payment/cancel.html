@@ -1,15 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block body %}
+
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Checkout canceled</title>
+  <title>Thanks for your order!</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section>
-    <p>Forgot to add something to your cart? Shop around then come back to pay!</p>
-  </section>
 
+  <div class="container" style="margin-bottom: 100px; margin-top: 250px; text-align: center;">
+
+    <div class="alert alert-danger" role="alert">
+      <b>Payment Fail!</b>
+    </div>
+
+  </div>
   
 
 </body>
 </html>
+
+{% endblock %}
