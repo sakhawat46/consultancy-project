@@ -11,7 +11,7 @@
         {% csrf_token %}
 
 
-        {% for message in messages %}
+        {% comment %} {% for message in messages %}
 
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>Hey!</strong> {{ message }}
@@ -20,7 +20,7 @@
         
         
 
-        {% endfor %}
+        {% endfor %} {% endcomment %}
 
 
         <h1 class="text-center mb-5">COMPANY INFORMATION</h1>
