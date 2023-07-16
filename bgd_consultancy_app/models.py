@@ -42,10 +42,14 @@ class CompanyInfo(models.Model):
 
     # )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     # service_package = models.ForeignKey(Package, on_delete=models.CASCADE)
     company_name = models.CharField(max_length=250)
     # company_type = models.CharField(max_length=50, choices=COMPANY_TYPE)
     company_contact = models.CharField(max_length=250)
+
+    package_information = models.TextField(max_length=50, blank=True, null=True)
+
     company_location = models.TextField(verbose_name='Company Address')
     business_purpose = models.TextField()
 

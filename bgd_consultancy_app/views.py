@@ -41,17 +41,24 @@ def booking(request):
     if request.user.is_authenticated:
         form1 = CustomerInfoForm()
         form2 = CompanyInfoForm()
+        package_info = SelectedPlan.objects.last()
         if request.method == "POST":
             form1 = CustomerInfoForm(data=request.POST)
             form2 = CompanyInfoForm(data=request.POST)
+
             if form1.is_valid() and form2.is_valid():
                 form1.instance.user = request.user
                 form2.instance.user = request.user
+
+                form2.instance.package_information = package_info
+
                 form1.save()
                 form2.save()
                 messages.success(request, "Booking Successfully Completed.")
                 return HttpResponseRedirect(reverse('payment_app:landing'))
-        diction = {'form1':form1, 'form2':form2}
+        diction = {'form1':form1, 'form2':form2, 'package_info': package_info}
+        # print("///////////////Package Info////////////////")
+        # print(package_info)
         return render(request,'bgd_consultancy_app/booking.html', context = diction)
     else:
         return redirect('login_app:login')
