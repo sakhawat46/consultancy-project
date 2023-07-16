@@ -52,7 +52,13 @@ class ProductLandingPageView(TemplateView):
     template_name = "payment/landing.html"
 
     def get_context_data(self, **kwargs):
-        product = Product.objects.get(name="Test Product")
+
+        product = Product.objects.get(name="Platinum")
+
+        # product = Product.objects.get(name="Gold")
+
+        # product = Product.objects.get(name="Silver")
+
         # prices = Price.objects.filter(product=product)
         # product_demo = BusinessPlan.objects.get(value1=500)
         print("#############")
