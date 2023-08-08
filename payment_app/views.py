@@ -15,6 +15,9 @@ class CreateCheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         product_id = self.kwargs["pk"]
         product = Product.objects.get(id=product_id)
+        print("###################")
+        print(product)
+        print("###################")
         YOUR_DOMAIN = "http://127.0.0.1:8000"
         checkout_session = stripe.checkout.Session.create(
             line_items=[
@@ -53,14 +56,17 @@ class ProductLandingPageView(TemplateView):
 
     def get_context_data(self, **kwargs):
 
-        product = Product.objects.get(name="Platinum")
+        # product = Product.objects.get(name="Platinum")
 
         # product = Product.objects.get(name="Gold")
 
-        # product = Product.objects.get(name="Silver")
+        product = Product.objects.get(name="Silver")
 
         # prices = Price.objects.filter(product=product)
+
+
         # product_demo = BusinessPlan.objects.get(value1=500)
+        # product = BusinessPlan.objects.get(value1=500)
         print("#############")
         # print(product_demo)
         print("##############")

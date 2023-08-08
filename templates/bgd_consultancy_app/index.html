@@ -130,7 +130,7 @@
                     </p>
                 </div>
 
-                <div class="card-body"  style="text-align: center;">
+                <div class="card-body" style="text-align: center;">
                     <form id="myform" class="myf">
                         <div class="row">
                             <div class="form-group col-12 col-lg-4" style="border-radius: 10px;">
@@ -184,6 +184,92 @@
                 <div class="card-header">
                     <div class="card-body">
                         <div class="row details">
+
+
+                            <!----- silver card start here ------- -->
+                            <div class="col-12 col-lg-4 mt-4">
+                                <div class="card bg-secondary text-white res-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Silver</h5>
+                                        <p class="card-text text-center">
+                                            Our core features for <br />the lowest price
+                                        </p>
+                                        <img class="card-img-top mx-auto d-block" style="width: 80px"
+                                            src="{% static 'images/paper-plane.png' %}" />
+                                        <div class="form-group card-text text-center">
+                                            <label>$</label>
+                                            <span id="value1"></span>
+                                            <p class="price-desc" style="margin-bottom: 24px">
+                                                One time transparent payment
+                                            </p>
+
+
+
+                                        </div>
+                                        <!-- <a href="#myform" class="btn btn-light mx-5"  style=" background-color: #fd8550;">Get the package<i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a> -->
+
+                                        <a href="{% url 'bgd_consultancy_app:booking' %}"
+                                            class="btn btn-light package-btn" style="margin-left: 35%;">Buy
+                                            package</a>
+                                        <br /><br />
+                                        <p style="text-align: center" ;>
+                                            <strong>INCLUDES:</strong>
+                                        </p>
+                                        <ul class="benifits-list">
+                                            <li>Preparing & Filing the Articles of Organization</li>
+                                            <li>Unlimited Name Searches</li>
+                                            <li>FREE Registered Agent Service</li>
+                                            <li>Unlimited Phone & Email Support</li>
+                                        </ul>
+                                        <br /><br /><br /><br /><br /><br /><br />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!----- silver card end here ------- -->
+
+
+                            <!----- gold card start here ------- -->
+                            <div class="col-12 col-lg-4 mt-4">
+                                <div class="card bg-success text-white res-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Gold</h5>
+                                        <p class="card-text text-center">
+                                            Comprehensive features <br />to get your business started
+                                        </p>
+                                        <img class="card-img-top mx-auto d-block" style="width: 80px"
+                                            src="{% static 'images/plane.png' %}" />
+                                        <div class="form-group card-text text-center">
+                                            <label>$</label>
+                                            <span id="value2"></span>
+                                            <p class="price-desc" style="margin-bottom: 24px">
+                                                One time transparent payment
+                                            </p>
+                                        </div>
+                                        <a href="{% url 'bgd_consultancy_app:booking' %}"
+                                            class="btn btn-light package-btn" style="margin-left: 35%;">Buy
+                                            package</a>
+                                        <br /><br />
+                                        <p style="text-align: center" ;>
+                                            <strong>INCLUDES:</strong>
+                                        </p>
+                                        <ul class="benifits-list">
+                                            <br />
+                                            <li>Preparing & Filing the Articles of Organization</li>
+                                            <li>FREE Registered Agent Service</li>
+                                            <li>Banking Resolution</li>
+                                            <li>Business Banking Account & Tax Consultation</li>
+                                            <li>Lifetime Company Alerts</li>
+                                            <li>unlimited Phone & Email Support</li>
+                                        </ul>
+                                        <br /><br /><br />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- gold card end here -->
+
+
                             <!----- Platinum card start here ------- -->
                             <div class="col-12 col-lg-4 mt-4">
                                 <div class="card bg-primary text-white card-color res-card">
@@ -197,12 +283,13 @@
 
                                         <div class="form-group card-text text-center">
                                             <label>$</label>
-                                            <span id="value1"></span>
+                                            <span id="value3"></span>
                                             <p class="price-desc" style="margin-bottom: 24px">
                                                 One time transparent payment
                                             </p>
                                         </div>
-                                        <a href="{% url 'bgd_consultancy_app:booking' %}" class="btn btn-light package-btn" style="margin-left: 35%;">Buy
+                                        <a href="{% url 'bgd_consultancy_app:booking' %}"
+                                            class="btn btn-light package-btn" style="margin-left: 35%;">Buy
                                             package</a>
                                         <br /><br />
                                         <p style="text-align: center" ;>
@@ -237,94 +324,16 @@
                                             <li>FREE Registered Agent Service</li>
                                             <li>Banking Resolution</li>
                                             <li>Business Banking Account & Tax Consultation</li>
-                                            <li>Online Access Dashboard</li>
+                                            <li>Lifetime Company Alerts</li>
                                             <li>unlimited Phone & Email Support</li>
                                         </ul>
-                                        <br/>
+                                        <br />
                                     </div>
                                 </div>
                             </div>
                             <!----- Platinum card End here ------- -->
 
-                            <!----- gold card start here ------- -->
-                            <div class="col-12 col-lg-4 mt-4">
-                                <div class="card bg-success text-white res-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Gold</h5>
-                                        <p class="card-text text-center">
-                                            Comprehensive features <br />to get your business started
-                                        </p>
-                                        <img class="card-img-top mx-auto d-block" style="width: 80px"
-                                            src="{% static 'images/plane.png' %}" />
-                                        <div class="form-group card-text text-center">
-                                            <label>$</label>
-                                            <span id="value2"></span>
-                                            <p class="price-desc" style="margin-bottom: 24px">
-                                                One time transparent payment
-                                            </p>
-                                        </div>
-                                        <a href="{% url 'bgd_consultancy_app:booking' %}" class="btn btn-light package-btn" style="margin-left: 35%;">Buy
-                                            package</a>
-                                        <br /><br />
-                                        <p style="text-align: center" ;>
-                                            <strong>INCLUDES:</strong>
-                                        </p>
-                                        <ul class="benifits-list">
-                                            <br />
-                                            <li>Preparing & Filing the Articles of Organization</li>
-                                            <li>FREE Registered Agent Service</li>
-                                            <li>Banking Resolution</li>
-                                            <li>Business Banking Account & Tax Consultation</li>
-                                            <li>Online Access Dashboard</li>
-                                            <li>unlimited Phone & Email Support</li>
-                                        </ul>
-                                        <br /><br /><br />
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- gold card end here -->
-
-                            <!----- silver card start here ------- -->
-                            <div class="col-12 col-lg-4 mt-4">
-                                <div class="card bg-secondary text-white res-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Silver</h5>
-                                        <p class="card-text text-center">
-                                            Our core features for <br />the lowest price
-                                        </p>
-                                        <img class="card-img-top mx-auto d-block" style="width: 80px"
-                                            src="{% static 'images/paper-plane.png' %}" />
-                                        <div class="form-group card-text text-center">
-                                            <label>$</label>
-                                            <span id="value3"></span>
-                                            <p class="price-desc" style="margin-bottom: 24px">
-                                                One time transparent payment
-                                            </p>
-
-                                           
-
-                                        </div>
-                                        <!-- <a href="#myform" class="btn btn-light mx-5"  style=" background-color: #fd8550;">Get the package<i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a> -->
-
-                                        <a href="{% url 'bgd_consultancy_app:booking' %}" class="btn btn-light package-btn" style="margin-left: 35%;">Buy
-                                            package</a>
-                                        <br /><br />
-                                        <p style="text-align: center" ;>
-                                            <strong>INCLUDES:</strong>
-                                        </p>
-                                        <ul class="benifits-list">
-                                            <li>Preparing & Filing the Articles of Organization</li>
-                                            <li>Unlimited Name Searches</li>
-                                            <li>FREE Registered Agent Service</li>
-                                            <li>Unlimited Phone & Email Support</li>
-                                        </ul>
-                                        <br /><br /><br /><br /><br /><br /><br />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!----- silver card end here ------- -->
                         </div>
                     </div>
                 </div>
