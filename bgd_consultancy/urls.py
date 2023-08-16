@@ -10,6 +10,7 @@ urlpatterns = [
     path('', include('bgd_consultancy_app.urls')),
     path('account/', include('login_app.urls')),
     path('payment/', include('payment_app.urls')),
+    path('sslpayment/', include('sslpayment_app.urls')),
 ]
 
 

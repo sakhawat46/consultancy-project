@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'login_app',
     'payment_app',
+    'sslpayment_app',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
