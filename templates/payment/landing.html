@@ -3,8 +3,6 @@
 {% load static %}
 {% block body %}
 
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,33 +11,78 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
   </head>
-
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
 
   <body>
 
+
+    <section class="text-center" style="margin-top: 100px;">
+      <div class="row">
+        <div class="column" style="background-color:#aaa;">
+          <h2>Column 1</h2>
+          <p>Some text..</p>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+          <h2>Column 2</h2>
+          <p>Some text..</p>
+        </div>
+      </div>
+    </section>
+
+
+<!-- 
     <section class="text-center" style="margin-top: 100px;">
       <img class="text-center" src="{% static 'images/Payments-social-card.png' %}" alt="" width="800" height="400"/>
     </section>
 
+    <section class="text-center" style="margin-top: 100px;">
+      <img class="text-center" src="{% static 'images/Payment-Brands.jpg' %}" alt="" width="800" height="400"/>
+    </section> -->
+
+
     <section style="margin-bottom: 100px; margin-top: 100px; text-align: center;">
       <div class="product">
-        {% comment %} <img
-          src="https://i.imgur.com/EHyR2nP.png"
-          alt="The cover of Stubborn Attachments"
-        /> {% endcomment %}
-
         <div class="description" style="text-align: center;">
-          {% comment %} <h3>{{ product.name }}</h3> {% endcomment %}
-
           <h5>${{ product.get_display_price }}</h5>
-          {% comment %} <h5>$100</h5> {% endcomment %}
-          
-          {% comment %} <h2> {{ product_demo.value1 }} </h2> {% endcomment %}
         </div>
-
       </div>
-      <button type="button" class="btn btn-warning" id="checkout-button">Checkout</button>
+
+      <button type="button" class="btn btn-warning" id="checkout-button">Stripe</button>
+
+      <div class="text-center">
+        <a href="{% url 'sslpayment_app:payment' %}" class="btn btn-outline-success mb-5 mt-5 fw-bold">SSLCOMMERZ</a>
+      </div>
+      
     </section>
+
+    
     {% csrf_token %}
   </body>
 

@@ -41,7 +41,7 @@ class CompanyInfo(models.Model):
     #     ('Nonprofit', 'Nonprofit'),
 
     # )
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='companyinfo')
 
     # service_package = models.ForeignKey(Package, on_delete=models.CASCADE)
     company_name = models.CharField(max_length=250)
@@ -55,6 +55,15 @@ class CompanyInfo(models.Model):
 
     def __str__(self):
         return self.company_name
+    
+
+    def is_fully_filled(self):
+        fields_names = [f.name for f in self._meta.get_fields()]
+
+        for field_name in fields_names:
+            value = getattr(self, field_name)
+            if value is None or value == '':
+                return True
 
 
 

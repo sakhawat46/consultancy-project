@@ -5,12 +5,23 @@ from decimal import Decimal
 import socket
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
+from bgd_consultancy_app.models import CompanyInfo
+from django.views.generic import TemplateView
 
 # Create your views here.
 
 
 @login_required
 def payment(request):
+
+    # companyinfo = CompanyInfo.objects.get_or_create(user=request.user)
+
+    # if not companyinfo[0].is_fully_filled():
+    # # if not request.user.companyinfo.is_fully_filled():
+    #     messages.info(request, f'Please fill up all the fields')
+    #     return redirect("bgd_consultancy_app:booking")
 
     store_id = 'bgd64dca86ccb86b'
     sslc_store_passcode = 'bgd64dca86ccb86b@ssl'
@@ -37,6 +48,24 @@ def payment(request):
 
 
 
-@login_required
+@csrf_exempt
 def complete(request):
+    if request.method == 'POST' or request.method == 'post':
+        payment_data = request.POST
+        # print(payment_data)
+        status = payment_data['status']
+
+        
+        if status == 'VALID':
+
+            tran_id = payment_data['tran_id']
+            val_id = payment_data['val_id']
+            amount = payment_data['amount']
+            bank_tran_id = payment_data['bank_tran_id']
+
+            messages.success(request, f"Your Payment Successfully Complete.")
+
+        if status == 'FAILED':
+            messages.warning(request, f"Your Payment is Cancel. Please Try Again.")
+
     return render(request, 'sslpayment/complete.html', context={})
