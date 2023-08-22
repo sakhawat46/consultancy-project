@@ -23,11 +23,11 @@ class CustomerInfo(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     email = models.EmailField()
-    phone_number = models.CharField(max_length=20, blank=True, null=True)
-    country = models.CharField(max_length=20, blank=True, null=True)
-    city = models.CharField(max_length=20, blank=True, null=True)
-    zipcode = models.CharField(max_length=20, blank=True, null=True)
-    address = models.TextField(max_length=200, blank=True, null=True, verbose_name='Address')
+    phone_number = models.CharField(max_length=20)
+    country = models.CharField(max_length=20)
+    city = models.CharField(max_length=20)
+    zipcode = models.CharField(max_length=20)
+    address = models.TextField(max_length=200, verbose_name='Address')
 
     def __str__(self):
         return self.name

@@ -9,4 +9,5 @@ app_name = "sslpayment_app"
 urlpatterns = [
     path('payment/', views.payment, name='payment'),
     path('status/', views.complete, name='status'),
+    path('purchase/<val_id>/<tran_id>/<amount>/', views.purchase, name='purchase'),
 ]

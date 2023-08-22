@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 import requests
 from sslcommerz_python.payment import SSLCSession
 from decimal import Decimal
@@ -9,6 +9,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 from bgd_consultancy_app.models import CompanyInfo
 from django.views.generic import TemplateView
+from bgd_consultancy_app.models import CustomerInfo
+from sslpayment_app.models import Payment_info
 
 # Create your views here.
 
@@ -32,11 +34,25 @@ def payment(request):
 
     mypayment.set_urls(success_url=status_url, fail_url=status_url, cancel_url=status_url, ipn_url=status_url)
 
-    mypayment.set_product_integration(total_amount=Decimal('20.20'), currency='BDT', product_category='Service', product_name='demo-product', num_of_item=1, shipping_method='YES', product_profile='None')
+    mypayment.set_product_integration(total_amount=Decimal('10000'), currency='BDT', product_category='Service', product_name='demo-product', num_of_item=1, shipping_method='YES', product_profile='None')
 
-    mypayment.set_customer_info(name='John Doe', email='johndoe@email.com', address1='demo address', address2='demo address 2', city='Dhaka', postcode='1207', country='Bangladesh', phone='01711111111')
 
-    mypayment.set_shipping_info(shipping_to='demo customer', address='demo address', city='Dhaka', postcode='1209', country='Bangladesh')
+    current_user = request.user
+    
+    print("#########current_user##########")
+    print(current_user)
+    customer_info = CustomerInfo.objects.all().last()
+    print(customer_info.name)
+    print(customer_info.email)
+    print(customer_info.phone_number)
+    print(customer_info.country)
+    print(customer_info.city)
+    print(customer_info.zipcode)
+    print(customer_info.address)
+
+    mypayment.set_customer_info(name=customer_info.name, email=customer_info.email, address1=customer_info.address, address2=customer_info.address, city=customer_info.city, postcode=customer_info.zipcode, country=customer_info.country, phone=customer_info.phone_number)
+
+    mypayment.set_shipping_info(shipping_to=customer_info.address, address=customer_info.address, city=customer_info.city, postcode=customer_info.zipcode, country=customer_info.country)
 
     response_data = mypayment.init_payment()
 
@@ -64,8 +80,23 @@ def complete(request):
             bank_tran_id = payment_data['bank_tran_id']
 
             messages.success(request, f"Your Payment Successfully Complete.")
+            return HttpResponseRedirect(reverse('sslpayment_app:purchase', kwargs={'val_id':val_id, 'tran_id':tran_id, 'amount':amount},))
 
         if status == 'FAILED':
             messages.warning(request, f"Your Payment is Cancel. Please Try Again.")
 
     return render(request, 'sslpayment/complete.html', context={})
+
+
+@login_required
+def purchase(request, val_id, tran_id, amount):
+    pay = Payment_info.objects.create()
+    customer_info = CustomerInfo.objects.all().last()
+    pay.name = customer_info.name
+    pay.email = customer_info.email
+    pay.phone_number = customer_info.phone_number
+    pay.payment_id = tran_id
+    pay.order_id = val_id
+    pay.amount = amount
+    pay.save()
+    return HttpResponseRedirect(reverse('bgd_consultancy_app:home'))

@@ -43,15 +43,15 @@
   <body>
 
 
-    <section class="text-center" style="margin-top: 100px;">
+    <section class="text-center" style="margin-top: 200px; margin-bottom: 300px;">
       <div class="row">
-        <div class="column" style="background-color:#aaa;">
-          <h2>Column 1</h2>
-          <p>Some text..</p>
+        <div class="column" style="background-color:#ffffff;">
+          <img class="text-center img-fluid" src="{% static 'images/stripe1.png' %}" alt="" width="800" height="400"/>
+          <button type="button" class="btn btn-outline-success mb-5 mt-5 fw-bold" id="checkout-button">Stripe</button>
         </div>
-        <div class="column" style="background-color:#bbb;">
-          <h2>Column 2</h2>
-          <p>Some text..</p>
+        <div class="column" style="background-color:#ffffff;">
+          <img class="text-center img-fluid" src="{% static 'images/Payment-Brands.jpg' %}" alt="" width="800" height="400"/>
+          <a href="{% url 'sslpayment_app:payment' %}" class="btn btn-outline-success fw-bold">SSLCOMMERZ</a>
         </div>
       </div>
     </section>
@@ -67,7 +67,7 @@
     </section> -->
 
 
-    <section style="margin-bottom: 100px; margin-top: 100px; text-align: center;">
+    <!-- <section style="margin-bottom: 100px; margin-top: 100px; text-align: center;">
       <div class="product">
         <div class="description" style="text-align: center;">
           <h5>${{ product.get_display_price }}</h5>
@@ -80,7 +80,7 @@
         <a href="{% url 'sslpayment_app:payment' %}" class="btn btn-outline-success mb-5 mt-5 fw-bold">SSLCOMMERZ</a>
       </div>
       
-    </section>
+    </section> -->
 
     
     {% csrf_token %}
