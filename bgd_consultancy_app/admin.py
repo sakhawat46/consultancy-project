@@ -5,7 +5,8 @@ from .models import *
 
 # Register your models here.
 
-# admin.site.register(Package)
+admin.site.register(Package)
+admin.site.register(SelectedPackage)
 admin.site.register(CustomerInfo)
 admin.site.register(CompanyInfo)
 

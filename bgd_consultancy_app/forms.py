@@ -1,6 +1,6 @@
 from dataclasses import fields
 from django import forms
-from bgd_consultancy_app.models import CustomerInfo, CompanyInfo, SelectedPlan
+from bgd_consultancy_app.models import CustomerInfo, CompanyInfo, SelectedPlan, SelectedPackage
 
 class CustomerInfoForm(forms.ModelForm):
     class Meta:
@@ -21,6 +21,12 @@ class SelectedPlanForm(forms.ModelForm):
         model = SelectedPlan
         fields = ['user']
 
+
+class SelectedPackageForm(forms.ModelForm):
+    class Meta:
+        model = SelectedPackage
+        fields = "__all__"
+        exclude = ('user',)
 
 
 #Dependency Add

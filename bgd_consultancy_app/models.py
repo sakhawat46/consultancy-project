@@ -3,20 +3,33 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from login_app.models import User
 
-# class Package(models.Model):
-#     PACKAGE_NAME = (
-#         ('Platinum', 'Platinum'),
-#         ('Gold', 'Gold'),
-#         ('Silver', 'Silver'),
-#     )
+class Package(models.Model):
+    PACKAGE_NAME = (
+        ('Platinum', 'Platinum'),
+        ('Gold', 'Gold'),
+        ('Silver', 'Silver'),
+    )
 
-#     name = models.CharField(max_length=250, choices=PACKAGE_NAME)
-#     preview_description = models.CharField(max_length=255, verbose_name='Short Descriptions')
-#     feature = RichTextField()
-#     price = models.IntegerField()
+    name = models.CharField(max_length=250, choices=PACKAGE_NAME)
+    price = models.IntegerField()
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
+    
+
+class SelectedPackage(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    PACKAGE_NAME = (
+        ('Platinum', 'Platinum'),
+        ('Gold', 'Gold'),
+        ('Silver', 'Silver'),
+    )
+
+    name = models.CharField(max_length=250, choices=PACKAGE_NAME)
+
+    def __str__(self):
+        return str(self.user)
+
 
 
 class CustomerInfo(models.Model):

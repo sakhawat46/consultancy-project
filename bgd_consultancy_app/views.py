@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.shortcuts import render, get_object_or_404, redirect
 from bgd_consultancy_app.models import CustomerInfo, CompanyInfo, Blog
-from bgd_consultancy_app.forms import CustomerInfoForm, CompanyInfoForm, SelectedPlanForm
+from bgd_consultancy_app.forms import CustomerInfoForm, CompanyInfoForm, SelectedPlanForm, SelectedPackageForm
 from django.urls import reverse, reverse_lazy
 from django.contrib import messages #import messages
 from django.http import JsonResponse
@@ -41,22 +41,27 @@ def booking(request):
     if request.user.is_authenticated:
         form1 = CustomerInfoForm()
         form2 = CompanyInfoForm()
+        form3 = SelectedPackageForm()
         package_info = SelectedPlan.objects.last()
         if request.method == "POST":
             form1 = CustomerInfoForm(data=request.POST)
             form2 = CompanyInfoForm(data=request.POST)
+            form3 = SelectedPackageForm(data=request.POST)
 
             if form1.is_valid() and form2.is_valid():
                 form1.instance.user = request.user
                 form2.instance.user = request.user
+                form3.instance.user = request.user
 
                 form2.instance.package_information = package_info
 
                 form1.save()
                 form2.save()
+                form3.save()
+
                 messages.success(request, "Booking Successfully Completed.")
                 return HttpResponseRedirect(reverse('payment_app:landing'))
-        diction = {'form1':form1, 'form2':form2, 'package_info': package_info}
+        diction = {'form1':form1, 'form2':form2, 'form3':form3, 'package_info': package_info}
         # print("///////////////Package Info////////////////")
         # print(package_info)
         return render(request,'bgd_consultancy_app/booking.html', context = diction)
@@ -64,7 +69,7 @@ def booking(request):
         return redirect('login_app:login')
 
 
-
+ 
 
 def package(request):
     # packages = Package.objects.all().order_by('-id')

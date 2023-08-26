@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 from bgd_consultancy_app.models import CompanyInfo
 from django.views.generic import TemplateView
-from bgd_consultancy_app.models import CustomerInfo
+from bgd_consultancy_app.models import CustomerInfo, SelectedPackage, Package
 from sslpayment_app.models import Payment_info
 
 # Create your views here.
@@ -34,14 +34,49 @@ def payment(request):
 
     mypayment.set_urls(success_url=status_url, fail_url=status_url, cancel_url=status_url, ipn_url=status_url)
 
-    mypayment.set_product_integration(total_amount=Decimal('10000'), currency='BDT', product_category='Service', product_name='demo-product', num_of_item=1, shipping_method='YES', product_profile='None')
+
+
+    print("#########Selected Package Info Start##########")
+
+
+    # package_info = SelectedPackage.objects.all().last()
+    package_info = SelectedPackage.objects.filter(user = request.user).last()
+
+    print(package_info)
+    print(type(package_info.name))
+    print(package_info.name)
+
+
+    mydata = Package.objects.get(name=package_info.name)
+    print("/////////////////")
+    print(mydata)
+    print(mydata.price)
+    print("/////////////////")
+
+
+    if package_info.name == 'Silver':
+        total_pay_amount = mydata.price
+        print(total_pay_amount)
+    elif package_info.name == 'Gold':
+        total_pay_amount = mydata.price
+        print(total_pay_amount)
+    elif package_info.name == 'Platinum':
+        total_pay_amount = mydata.price
+        print(total_pay_amount)
+
+    print("#########Selected Package Info End##########")
+
+
+    mypayment.set_product_integration(total_amount=Decimal(total_pay_amount), currency='BDT', product_category='Service', product_name='demo-product', num_of_item=1, shipping_method='YES', product_profile='None')
 
 
     current_user = request.user
     
     print("#########current_user##########")
     print(current_user)
-    customer_info = CustomerInfo.objects.all().last()
+    # customer_info = CustomerInfo.objects.all().last()
+    customer_info = CustomerInfo.objects.filter(user = request.user).last()
+    print(customer_info)
     print(customer_info.name)
     print(customer_info.email)
     print(customer_info.phone_number)
@@ -91,7 +126,8 @@ def complete(request):
 @login_required
 def purchase(request, val_id, tran_id, amount):
     pay = Payment_info.objects.create()
-    customer_info = CustomerInfo.objects.all().last()
+    # customer_info = CustomerInfo.objects.all().last()
+    customer_info = CustomerInfo.objects.filter(user = request.user).last()
     pay.name = customer_info.name
     pay.email = customer_info.email
     pay.phone_number = customer_info.phone_number
@@ -99,4 +135,5 @@ def purchase(request, val_id, tran_id, amount):
     pay.order_id = val_id
     pay.amount = amount
     pay.save()
-    return HttpResponseRedirect(reverse('bgd_consultancy_app:home'))
+    # return HttpResponseRedirect(reverse('bgd_consultancy_app:home'))
+    return render(request, 'sslpayment/complete.html', context={})
